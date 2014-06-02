@@ -73,4 +73,5 @@ group :production do
   gem 'rollbar'
   gem 'unicorn'
   gem 'rails_12factor'
+  gem 'heroku'
 end
