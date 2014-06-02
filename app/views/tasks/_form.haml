@@ -1,0 +1,5 @@
+.row
+  = simple_form_for task, :defaults => { :wrapper_html => {:class => 'form-horizontal'} } do |f|
+    = f.input :sbox, as: :file, label: 'Choose sbox file from hard disc'
+    = f.input :name, collection: ["Nonlinearity","SAC"], :include_blank => false
+    = f.button :submit, 'Process sbox' 

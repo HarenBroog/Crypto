@@ -1,0 +1,53 @@
+%small 
+  = task.name 
+  %br 
+    = task.sbox 
+  %br 
+.h2 Sbox functions:
+%table.table
+  %thead
+    %tr
+      %th Number
+      %th Body
+  %tbody
+    - task.function.size.times do |i|
+      %tr
+        %td 
+          = i
+        %td
+          - fbody=''
+          - task.function[i].size.times do |j|
+            - fbody+=task.function[i][j].to_s
+          = fbody
+.h2 Basic functions:
+%table.table
+  %thead
+    %tr
+      %th Number
+      %th Body
+  %tbody
+    - task.function_basic.size.times do |i|
+      %tr
+        %td 
+          = i
+        %td
+          - fbody=''
+          - task.function_basic[i].size.times do |j|
+            - fbody+=task.function_basic[i][j].to_s
+          = fbody
+.h2 Linear functions:
+%table.table
+  %thead
+    %tr
+      %th Number
+      %th Body
+  %tbody
+    - task.function_linear.size.times do |i|
+      %tr
+        %td 
+          = i
+        %td
+          - fbody=''
+          - task.function_linear[i].size.times do |j|
+            - fbody+=task.function_linear[i][j].to_s
+          = fbody

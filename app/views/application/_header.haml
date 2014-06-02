@@ -1,0 +1,27 @@
+.navbar.navbar-default.navbar-static-top{role: "navigation"}
+  .container
+    .navbar-header
+      = link_to 'Crypto', root_path, class: 'navbar-brand'
+    .p
+      .navbar-collapse.collapse
+        %ul.nav.navbar-nav.navbar-right
+          - if current_user.try(:admin?)
+            %li
+              = link_to 'Admin', rails_admin.dashboard_path
+          %li
+            = link_to 'Tasks', root_path
+          - if user_signed_in?
+            %li.dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+                Account
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                  = link_to 'My profile', user_path(current_user)
+                %li
+                  = link_to 'Edit account', edit_user_registration_path
+                %li
+                  = link_to 'Log out', destroy_user_session_path, method: 'delete'
+          - else
+            %li
+              = link_to 'Log in', new_user_session_path
