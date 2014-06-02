@@ -3,7 +3,6 @@ ruby '2.1.2'
 
 gem 'rails', '4.1.1'
 gem 'uglifier', '>= 1.3.0'
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 gem 'draper'
 gem 'decent_decoration'
@@ -71,5 +70,4 @@ end
 
 group :production do
   gem 'rollbar'
-  gem 'unicorn'
 end
