@@ -8,7 +8,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'draper'
 gem 'decent_decoration'
 gem 'decent_exposure'
-gem 'chosen-rails'
 
 gem 'sass-rails', '~> 4.0.3'
 gem 'coffee-rails', '~> 4.0.0'
@@ -46,7 +45,6 @@ gem 'i18n-js'
 gem 'haml_coffee_assets'
 gem 'execjs'
 gem 'kaminari'
-gem 'searchlight'
 
 group :test do
   gem 'simplecov', '~> 0.7.1', require: false
