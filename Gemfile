@@ -70,4 +70,5 @@ end
 
 group :production do
   gem 'rollbar'
+  gem 'unicorn'
 end
