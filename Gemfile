@@ -69,7 +69,7 @@ end
 
 group :production do
   gem 'rollbar'
-  gem 'unicorn'
+  gem 'thin'
   gem 'rails_12factor'
   gem 'heroku'
 end
