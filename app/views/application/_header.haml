@@ -8,8 +8,8 @@
           - if current_user.try(:admin?)
             %li
               = link_to 'Admin', rails_admin.dashboard_path
-          %li
-            = link_to 'Tasks', root_path
+          / %li
+          /   = link_to 'Tasks', root_path
           - if user_signed_in?
             %li.dropdown
               %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
