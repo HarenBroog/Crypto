@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
 
   expose(:task, attributes: :task_params)
-  expose(:recent_tasks) {Task.last(5)}
+  
 
   def new
   end
