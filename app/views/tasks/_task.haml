@@ -2,52 +2,64 @@
   = task.name 
   %br 
     = task.sbox 
-  %br 
-.h2 Sbox functions:
-%table.table
-  %thead
-    %tr
-      %th Number
-      %th Body
-  %tbody
-    - task.function.size.times do |i|
-      %tr
-        %td 
-          = i
-        %td
-          - fbody=''
-          - task.function[i].size.times do |j|
-            - fbody+=task.function[i][j].to_s
-          = fbody
-.h2 Basic functions:
-%table.table
-  %thead
-    %tr
-      %th Number
-      %th Body
-  %tbody
-    - task.function_basic.size.times do |i|
-      %tr
-        %td 
-          = i
-        %td
-          - fbody=''
-          - task.function_basic[i].size.times do |j|
-            - fbody+=task.function_basic[i][j].to_s
-          = fbody
-.h2 Linear functions:
-%table.table
-  %thead
-    %tr
-      %th Number
-      %th Body
-  %tbody
-    - task.function_linear.size.times do |i|
-      %tr
-        %td 
-          = i
-        %td
-          - fbody=''
-          - task.function_linear[i].size.times do |j|
-            - fbody+=task.function_linear[i][j].to_s
-          = fbody
+  %br
+.container
+  %ul#my-tab.nav.nav-tabs{"data-tabs" => "tabs"}
+    %li.active
+      %a{"data-toggle" => "tab", href: "#sboxfunctions"} Sbox functions
+    %li
+      %a{"data-toggle" => "tab", href: "#basicfunctions"} Basic functions
+    %li
+      %a{"data-toggle" => "tab", href: "#linearfunctions"} Linear functions
+    %li
+      %a{"data-toggle" => "tab", href: "#nonlinearity"} Nonlinearity
+  #my-tab.tab-content
+    #sboxfunctions.tab-pane.active 
+      %table.table
+        %thead
+          %tr
+            %th Number
+            %th Body
+        %tbody
+          - task.function.size.times do |i|
+            %tr
+              %td 
+                = i
+              %td
+                - fbody=''
+                - task.function[i].size.times do |j|
+                  - fbody+=task.function[i][j].to_s
+                = fbody
+    #basicfunctions.tab-pane 
+      %table.table
+      %thead
+        %tr
+          %th Number
+          %th Body
+      %tbody
+        - task.function_basic.size.times do |i|
+          %tr
+            %td 
+              = i
+            %td
+              - fbody=''
+              - task.function_basic[i].size.times do |j|
+                - fbody+=task.function_basic[i][j].to_s
+              = fbody
+    #linearfunctions.tab-pane 
+      %table.table
+      %thead
+        %tr
+          %th Number
+          %th Body
+      %tbody
+        - task.function_linear.size.times do |i|
+          %tr
+            %td 
+              = i
+            %td
+              - fbody=''
+              - task.function_linear[i].size.times do |j|
+                - fbody+=task.function_linear[i][j].to_s
+              = fbody
+    #nonlinearity.tab-pane ...
