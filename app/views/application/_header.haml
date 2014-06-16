@@ -5,12 +5,12 @@
     .p
       .navbar-collapse.collapse
         %ul.nav.navbar-nav.navbar-right
-          - if current_user.try(:admin?)
+          - if false and current_user.try(:admin?)
             %li
               = link_to 'Admin', rails_admin.dashboard_path
           / %li
           /   = link_to 'Tasks', root_path
-          - if user_signed_in?
+          - if false and user_signed_in?
             %li.dropdown
               %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
                 Account

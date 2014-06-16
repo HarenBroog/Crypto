@@ -25,6 +25,7 @@ gem 'mongoid', github: 'mongoid/mongoid'
 gem 'mongoid-sadstory'
 gem 'bson'
 gem 'bson_ext'
+gem "moped", github: "mongoid/moped"
 gem 'enumerize'
 gem 'mongoid_search', github: 'mauriciozaffari/mongoid_search', branch: 'master'
 gem 'searchlight'
@@ -33,7 +34,7 @@ gem 'carrierwave'
 gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 gem 'chosen-rails'
 
-gem 'devise'
+gem 'devise', :branch => 'lm-rails-4-1-2-rc1'
 gem 'devise-async'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
@@ -45,6 +46,9 @@ gem 'i18n-js'
 gem 'haml_coffee_assets'
 gem 'execjs'
 gem 'kaminari'
+
+
+gem 'certificate_authority'
 
 group :test do
   gem 'simplecov', '~> 0.7.1', require: false

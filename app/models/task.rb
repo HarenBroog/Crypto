@@ -13,6 +13,7 @@ class Task
   field :function_linear, type: Array
   field :nonlinearity_value, type: Array
   field :SAC_value, type: Array
+  
   private
 
   def nonlinearity

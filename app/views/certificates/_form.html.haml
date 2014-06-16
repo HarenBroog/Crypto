@@ -1,0 +1,8 @@
+.row
+  = simple_form_for certificate, :defaults => { :wrapper_html => {:class => 'form-horizontal'} } do |f|
+    = f.input :domain, label: 'Enter domain name'
+    = f.input :organization, label: 'Enter organization name'
+    = f.input :text, label: 'Additional comment'
+    = f.input :root, as: :Boolean, label: 'Root certificate?'
+    = f.input :parent, collection: ca,:label_method => :domain ,:value_method => :domain, :include_blank => true
+    = f.button :submit, 'Generate certificate' 
