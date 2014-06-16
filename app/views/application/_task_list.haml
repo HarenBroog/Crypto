@@ -31,10 +31,10 @@
             %th.col-sm-4
               = link_to 'New',  new_certificate_path, class: 'btn btn-default'
         %tbody
-          - recent_tasks.reverse.each { |t|
+          - recent_certs.reverse.each { |t|
           %tr
             %td 
-              = link_to t.sbox, task_path(t)
+              = link_to t.domain, certificate_path(t)
             %td
               = t.created_at
               - }
