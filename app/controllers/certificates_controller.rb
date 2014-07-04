@@ -14,7 +14,7 @@ def create
     end
   else
     render :new
-  end 
+  end
 end
 
 def show
@@ -28,12 +28,12 @@ def download_cert
       r.serial_number.number=1
       r.key_material.generate_key
       r.signing_entity = true
-      signing_profile = 
+      signing_profile =
       {
-        "extensions" => 
+        "extensions" =>
           {
           "basicConstraints" => {"ca" => true},"keyUsage" => {"usage" => ["critical", "keyCertSign"] }
-          } 
+          }
       }
       r.sign!(signing_profile)
 
@@ -42,7 +42,7 @@ def download_cert
           "basicConstraints" => {"ca" => false},
           "certificatePolicies" => {
           "user_notice" => {
-            "explicit_text" => certificate.text, 
+            "explicit_text" => certificate.text+'2',
             "organization" => certificate.organization
           }
         }
